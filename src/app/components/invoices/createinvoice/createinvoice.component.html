@@ -1,0 +1,14 @@
+<h1>Create Invoice</h1>
+<link rel="stylesheet" href="createinvoice.component.css">
+<body>
+  <form [formGroup]="invoiceForm" action="http://localhost/api/invoices/invoices" method="post">
+    <div class="form-field">
+      <label mat-label for="name">Name: </label>
+      <input id="name" name="name" type="text" formControlName="name" >
+      <input id="api" name="api" type="text" value="create" formControlName="api" >
+    </div>
+    <div class="form-field">
+      <button mat-button type="submit" (click)="Create()">Create Invoice</button>
+    </div>
+  </form>
+<body>
